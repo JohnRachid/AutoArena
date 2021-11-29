@@ -2,7 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 
 
-import { Stage, Sprite, render, PixiRef } from '@inlet/react-pixi'
+import { Stage, Sprite, render, PixiRef,  } from '@inlet/react-pixi'
 
 
 export class App extends React.Component {
@@ -10,7 +10,6 @@ export class App extends React.Component {
 
   constructor(props: any) {
     super(props);
-    
   }
 
   handleClick = () => {
@@ -25,7 +24,7 @@ export class App extends React.Component {
     return (
       <Stage>
         <Sprite
-          image="src\assets\charModel.png"
+          image="src\assets\images\charModel.png"
           x={64}
           y={64}
           scale={this.scale}
