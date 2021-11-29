@@ -26,9 +26,15 @@ export class Player extends React.Component {
   }
 
   dragStart = () => {
-    console.log('Click happened');
-    this.scale.x = this.scale.x * 2
-    this.scale.y = this.scale.y * 2
+    console.log('Click down');
+
+    console.log(this.scale)
+    this.render()
+  }
+
+  dragEnd = () => {
+    console.log('Click release');
+
     console.log(this.scale)
     this.render()
   }
@@ -41,7 +47,11 @@ export class Player extends React.Component {
           y={64}
           scale={this.scale}
           interactive={true}
+          draggable={true}
           pointerdown={() => {
+            this.dragStart()
+          }}
+          pointerup={() => {
             this.dragStart()
           }}
         />
