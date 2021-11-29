@@ -4,7 +4,7 @@ import * as ReactDOM from "react-dom";
 
 import { Stage, render, useApp, Sprite } from '@inlet/react-pixi'
 import * as PIXI from 'pixi.js'
-import { CreatureContainer } from "c:/git/AutoArena/src/components/creatureContainer";
+import { CreatureContainer } from "./../../components/creatureContainer";
 
 export class App extends React.Component {
 
