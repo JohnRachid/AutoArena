@@ -3,7 +3,7 @@ import * as ReactDOM from "react-dom";
 import { App } from "./screens/home/home";
 
 
-setInterval(render, 1000 / 60);
+render();
 
 function render() {
     ReactDOM.render(<App />, document.getElementById("root"));

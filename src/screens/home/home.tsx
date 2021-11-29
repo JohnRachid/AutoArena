@@ -2,43 +2,30 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 
 
-import { Stage, Sprite, render, PixiRef,  } from '@inlet/react-pixi'
-
+import { Stage, render, useApp, Sprite } from '@inlet/react-pixi'
+import * as PIXI from 'pixi.js'
+import { CreatureContainer } from "c:/git/AutoArena/src/components/creatureContainer";
 
 export class App extends React.Component {
-  scale = { x: 1, y: 1 };
 
   constructor(props: any) {
     super(props);
   }
 
   handleClick = () => {
-    console.log('Click happened');
-    this.scale.x = this.scale.x * 2
-    this.scale.y = this.scale.y * 2
-    console.log(this.scale)
-    this.render()
+    this.render();
   }
 
-  generateDude() {
-    return (
-      <Stage>
-        <Sprite
-          image="src\assets\images\charModel.png"
-          x={64}
-          y={64}
-          scale={this.scale}
-          interactive={true}
-          pointerdown={() => {
-            this.handleClick()
-          }}
-        />
-      </Stage>
-    )
+  generateContainer() {
+    return (<div onClick={this.handleClick}>
+    <Stage>
+      <CreatureContainer></CreatureContainer>
+    </Stage>
+    </div>)
   }
 
   render() {
-   return this.generateDude()
+   return this.generateContainer()
   }
 }
 
