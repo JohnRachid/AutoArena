@@ -1,7 +1,10 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import {App} from "./screens/home/home";
+import { App } from "./screens/home/home";
 
 
+setInterval(render, 1000 / 60);
 
-ReactDOM.render(<App />, document.getElementById("root"));
+function render() {
+    ReactDOM.render(<App />, document.getElementById("root"));
+}

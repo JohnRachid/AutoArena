@@ -1,13 +1,16 @@
 import * as React from "react";
+import * as ReactDOM from "react-dom";
 
-import { Stage, Sprite, render } from '@inlet/react-pixi'
+
+import { Stage, Sprite, render, PixiRef } from '@inlet/react-pixi'
+
 
 export class App extends React.Component {
   scale = { x: 1, y: 1 };
 
   constructor(props: any) {
     super(props);
-
+    
   }
 
   handleClick = () => {
@@ -29,7 +32,6 @@ export class App extends React.Component {
           interactive={true}
           pointerdown={() => {
             this.handleClick()
-           
           }}
         />
       </Stage>
@@ -40,6 +42,4 @@ export class App extends React.Component {
    return this.generateDude()
   }
 }
-
-
 
