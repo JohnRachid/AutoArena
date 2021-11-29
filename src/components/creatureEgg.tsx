@@ -35,13 +35,13 @@ export class CreatureEgg extends React.Component<IChildComponentProps & PassedPr
         this.spriteY = props.positionY;
 
         if(this.type === 'issaman') {
-          this.spriteImage = "src\assets\images\issaman.png";
+          this.spriteImage = "src/assets/images/issaman.png";
         } else if(this.type === 'charModel'){
-          this.spriteImage = "src\assets\images\charModel.png";
+          this.spriteImage = "src/assets/images/charModel.png";
         } else if(this.type === 'vinDiesel'){
-          this.spriteImage = "src\assets\images\vinDiesel.png";
+          this.spriteImage = "src/assets/images/vinDiesel.png";
         } else if(this.type === 'spoolky'){
-          this.spriteImage = "src\assets\images\spoolky.png";
+          this.spriteImage = "src/assets/images/spoolky.png";
         } 
       }
 
@@ -52,7 +52,7 @@ export class CreatureEgg extends React.Component<IChildComponentProps & PassedPr
             y={this.spriteY}
             scale={this.scale}
             visible={true} 
-            //interactive={true}
+            interactive={true}
             pointerdown={() => {
                 this.handleClick()
               }}

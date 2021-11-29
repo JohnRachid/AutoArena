@@ -9,32 +9,30 @@ export class CreatureContainer extends React.Component {
     constructor(props: any) {
         super(props);
         this.render();
-      }
- 
-      render(){
-          try {
-        return <Container> {
-            this.creatureEggs.map((item) => (
-                <CreatureEgg key = {item.creatureType}
-                techLevel={item.techLevel} 
-                creatureType={item.creatureType} 
-                positionX={item.positionX} 
-                positionY={item.positionY}
-                />
-            ))}
-        </Container>}
-        catch(e ){
-            console.log('catch ' + e);
-        }
-      }
+    }
 
-      initializeEggs() : any[] {
+    render() {
+            return(
+                this.creatureEggs.map((item) => 
+                    <CreatureEgg
+                        key={item.creatureType}
+                        techLevel={item.techLevel}
+                        creatureType={item.creatureType}
+                        positionX={item.positionX}
+                        positionY={item.positionY}
+                    />
+                ))
+            
+   
+    }
+
+    initializeEggs(): any[] {
         var listOfEggs = [];
-        listOfEggs.push({techLevel: 0, creatureType:'issaman', positionX:0, positionY:0 });
-        listOfEggs.push({techLevel: 0, creatureType:'charModel', positionX:100, positionY:0 });
-        listOfEggs.push({techLevel: 0, creatureType:'vinDiesel', positionX:200, positionY:0 });
-        listOfEggs.push({techLevel: 0, creatureType:'spoolky', positionX:300, positionY:0 });
-    
+        listOfEggs.push({ techLevel: 0, creatureType: 'issaman', positionX: 0, positionY: 0 });
+        listOfEggs.push({ techLevel: 0, creatureType: 'charModel', positionX: 100, positionY: 0 });
+        listOfEggs.push({ techLevel: 0, creatureType: 'vinDiesel', positionX: 200, positionY: 0 });
+        listOfEggs.push({ techLevel: 0, creatureType: 'spoolky', positionX: 300, positionY: 0 });
+
         return listOfEggs;
     }
 }
